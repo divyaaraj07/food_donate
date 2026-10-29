@@ -1,0 +1,237 @@
+---
+name: AnnaSeva FoodShare
+colors:
+  surface: '#fff8f5'
+  surface-dim: '#e0d8d5'
+  surface-bright: '#fff8f5'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#faf2ee'
+  surface-container: '#f4ece8'
+  surface-container-high: '#eee7e3'
+  surface-container-highest: '#e9e1dd'
+  on-surface: '#1e1b19'
+  on-surface-variant: '#554336'
+  inverse-surface: '#33302d'
+  inverse-on-surface: '#f7efeb'
+  outline: '#887364'
+  outline-variant: '#dbc2b0'
+  surface-tint: '#904d00'
+  primary: '#8d4b00'
+  on-primary: '#ffffff'
+  primary-container: '#b15f00'
+  on-primary-container: '#fffbff'
+  inverse-primary: '#ffb77d'
+  secondary: '#006d30'
+  on-secondary: '#ffffff'
+  secondary-container: '#92f5a4'
+  on-secondary-container: '#007233'
+  tertiary: '#825100'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#a36700'
+  on-tertiary-container: '#fffbff'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdcc3'
+  primary-fixed-dim: '#ffb77d'
+  on-primary-fixed: '#2f1500'
+  on-primary-fixed-variant: '#6e3900'
+  secondary-fixed: '#95f8a7'
+  secondary-fixed-dim: '#79db8d'
+  on-secondary-fixed: '#00210a'
+  on-secondary-fixed-variant: '#005323'
+  tertiary-fixed: '#ffddb8'
+  tertiary-fixed-dim: '#ffb95f'
+  on-tertiary-fixed: '#2a1700'
+  on-tertiary-fixed-variant: '#653e00'
+  background: '#fff8f5'
+  on-background: '#1e1b19'
+  surface-variant: '#e9e1dd'
+typography:
+  headline-xl:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  headline-xl-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 30px
+    fontWeight: '700'
+    lineHeight: 38px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  title-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Inter
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 22px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 18px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 10px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.05em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.25rem
+  gutter-mobile: 0.75rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system expresses the cultural ethos of *Anna Daan* (the sacred gift of food) transformed into modern civic infrastructure. The UI balances grassroots warmth and community generosity with the organizational rigor required for high-stakes, time-sensitive food rescue and redistribution across India.
+
+### Design Movement & Aesthetic
+- **Warm Civic Modernism**: Contemporary digital precision anchored by organic Indian materiality. It avoids faux-heritage clutter by deploying clean layouts, generous negative space, and disciplined typographic hierarchy.
+- **Micro-Heritage Accents**: Geometric rangoli and mandala patterns appear solely as delicate mathematical watermarks (opacity ≤ 8%), never as decorative noise. Icons reference indigenous forms—such as the earthen diya, wheat sheaves (dhanya), and brass tiffin tiers—rendered in minimalist, single-stroke vector lines.
+- **Emotional Resonance**: Dignified, vibrant, prompt, and communal. The aesthetic evokes the warmth of a community kitchen (*langar*) paired with the operational clarity of emergency dispatch software.
+
+## Colors
+
+The palette draws directly from ceremonial spices, fertile earth, and sacred harvest colors, balanced against soft, unbleached grain backgrounds to reduce eye strain in outdoor field conditions.
+
+### Palette Architecture
+- **Primary (`#D97706` Terracotta Saffron)**: Signifies action, dispatch, primary calls-to-action, and community warmth. Used for hero buttons, active route highlights, and prominent milestones.
+- **Secondary (`#15803D` Sacred Emerald)**: Signifies fresh surplus, safe consumption windows, verified hygiene credentials, and vegetarian indicators.
+- **Tertiary (`#F59E0B` Marigold Amber)**: Reserved for urgent rescue calls, expiring pickups, and celebratory distribution tallies.
+- **Neutral Primary (`#1C1917` Spiced Charcoal)**: High-contrast text and grounding structures. Warm undertones prevent clinical harshness.
+- **Surface Canvas (`#FFFDF7` Warm Malai Cream)**: The foundational background, replacing sterile digital white with natural parchment warmth.
+
+### Functional Dietary & Verification Semantics
+- **Pure Veg Indicator**: Green dot inside a square frame (`#15803D`).
+- **Non-Veg Indicator**: Deep carmine dot inside a square frame (`#B91C1C`).
+- **FSSAI & Hygiene Verified**: Emerald badge with subtle golden-amber shield detail.
+- **Emergency Pickups (< 2h shelf life)**: High-contrast terracotta-tinted banner with pulsing amber badge.
+
+## Typography
+
+The type system blends the energetic curves of **Plus Jakarta Sans** for headers, wayfinding badges, and calls-to-action with the utilitarian legibility of **Inter** for dense transactional lists, logistical schedules, and food inspection logs.
+
+- **Plus Jakarta Sans**: Injected with warmth, gentle terminals, and crisp geometric structures that read cleanly across Indian regional script transliterations and bilingual headers.
+- **Inter**: Neutral, horizontally compact, and legible on low-cost mobile displays under bright sunlight.
+- **Numerals**: Numerical tallies (e.g., "1,240 kg Meals Rescued") always use tabular lining figures in Plus Jakarta Sans SemiBold to prevent layout shifting during real-time dashboard updates.
+
+## Layout & Spacing
+
+A structured responsive grid built to support volunteer dispatchers on desktop consoles as effortlessly as volunteers reviewing pickup addresses on budget mobile browsers.
+
+### Grid Rules
+- **Desktop (≥1024px)**: 12-column fluid grid, 1280px max-width wrapper, 32px margins, 20px gutters.
+- **Tablet (768px - 1023px)**: 8-column grid, 24px margins, 16px gutters.
+- **Mobile (≤767px)**: 4-column grid, 16px outer margins, 12px gutters.
+
+### Layout Principles
+- **Touch Ergonomics**: All interactive elements (accept donation, verify OTP, call venue) maintain a vertical tap target of at least 48px on mobile views.
+- **Density Tiering**: Listing interfaces utilize tight, information-dense clusters (`space-xs` and `space-sm`) for food temperature and shelf-life metrics, surrounded by generous section separation (`space-xl`) to prevent accidental interactions in high-stress logistics environments.
+
+## Elevation & Depth
+
+Visual hierarchy uses warm, sunlit drop shadows combined with layered canvas surfaces rather than stark grey drop-shadows.
+
+### Layer Tiers
+- **Tier 0 (Canvas)**: `#FFFDF7` base surface. Flat and grounded.
+- **Tier 1 (Surface Cards & Shelves)**: `#FFFFFF` panels elevated by a warm ambient shadow: `0px 2px 8px -2px rgba(28, 25, 23, 0.05), 0px 1px 3px 0px rgba(217, 119, 6, 0.04)`. Outlined with a soft cream-border: `1px solid rgba(28, 25, 23, 0.06)`.
+- **Tier 2 (Floating Action Bars & Dropdowns)**: Elevated by `0px 8px 24px -4px rgba(28, 25, 23, 0.08), 0px 4px 8px -2px rgba(217, 119, 6, 0.06)`.
+- **Tier 3 (Modals & Emergency Alerts)**: `0px 16px 36px -6px rgba(28, 25, 23, 0.16)`. Accompanied by a semi-opaque backdrop: `rgba(28, 25, 23, 0.6)` with a 3px blur.
+
+### Decorative Vector Motifs
+- Rangoli and geometric mandala motifs must be rendered as vector borders or background watermarks with absolute opacity limits between 4% and 7%. They are always positioned in layout corners or card margins and never layered directly beneath small body copy.
+
+## Shapes
+
+The interface balances organic hospitality with systematic card boundaries.
+
+- **Baseline Geometry**: A 0.5rem (8px) base radius across operational cards, form inputs, and status displays. This softens the technological edge, reflecting the human kindness of food sharing without drifting into cartoonish aesthetics.
+- **Pill Enhancements (`rounded-full`)**: Strictly reserved for contextual tags, dietary classification dots, filter pills, and quick-call action buttons.
+- **Icon Enclosures**: Circular or soft squircle backdrops for rescue milestone icons, donor category indicators (e.g., Wedding Hall, Gurdwara Langar, Corporate Cafeteria), and vehicle dispatch trackers.
+
+## Components
+
+### Buttons
+- **Primary Action (Claim Food / Donate Meal)**: Solid `#D97706` terracotta saffron background, white `#FFFFFF` text, `border-radius: 8px`, inner letter-spacing `0.01em`. On hover: `#B45309`. On active: subtle scale shift down to 0.98.
+- **Secondary (Volunteer / Route Info)**: Tinted background `rgba(21, 128, 61, 0.10)`, text `#15803D`, border: `1px solid rgba(21, 128, 61, 0.25)`.
+- **Emergency Priority**: Terracotta-filled pulse button with high-contrast text and a miniature countdown timer.
+
+### Badges & Category Tags
+- **Dietary Indicators**: Standard Indian FSSAI compliant iconography.
+  - *Pure Veg*: Square box (`#15803D`, 1.5px stroke) with a solid centered circle of 6px diameter.
+  - *Non-Veg*: Square box (`#B91C1C`, 1.5px stroke) with a solid centered circle of 6px diameter.
+- **Donor Origin Chips**:
+  - *Langar Seva*: Warm amber container (`rgba(245, 158, 11, 0.15)`), text `#B45309`, accompanied by a community pot icon.
+  - *Wedding Caterer*: Terracotta container (`rgba(217, 119, 6, 0.12)`), text `#D97706`.
+  - *Halwai Surplus*: Warm honey-tinted container with dessert platter micro-icon.
+- **Trust Badges**: "FSSAI Verified Kitchen" badge in rich green with a gold checkmark icon, uppercase `label-sm` tracking.
+
+### Cards & Rescue Listings
+- **Food Lot Card**: White card with a top 4px accent stripe color-coded by shelf life remaining (Green: >4h, Amber: 2-4h, Crimson: <2h).
+  - Contains meal count badge (e.g., "Feeds 150 people").
+  - Clear pickup window timestamp in tabular numerals.
+  - Verification chip and venue distance indicator.
+
+### Input Fields & Controls
+- **Form Inputs**: White background, `1px solid rgba(28, 25, 23, 0.15)` border, 8px radius. Active focus transitions to `2px solid #D97706` with an offset ring of `rgba(217, 119, 6, 0.15)`.
+- **Checkboxes & Radios**: 4px radius for checkboxes, full circle for radios. Checked state fills with `#15803D` or `#D97706` with crisp white check/pip.
+- **OTP Verification Inputs**: Segmented 6-box input array with elevated numeric styling, optimized for quick SMS confirmation at donation handover points.

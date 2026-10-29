@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>FoodShare</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-tint': '#006c46', 'secondary': '#615e57', 'tertiary-fixed-dim': '#ffb869', 'surface-container': '#e6f0e8', 'background': '#f2fcf4', 'surface-container-low': '#ecf6ee', 'inverse-primary': '#7bd9a7', 'on-primary-fixed': '#002112', 'surface': '#f2fcf4', 'on-secondary-fixed-variant': '#494740', 'on-error': '#ffffff', 'inverse-on-surface': '#e9f3eb', 'outline-variant': '#bec9c0', 'on-background': '#151d19', 'tertiary-container': '#a96700', 'error-container': '#ffdad6', 'surface-bright': '#f2fcf4', 'secondary-container': '#e7e2d8', 'on-primary-fixed-variant': '#005234', 'on-secondary': '#ffffff', 'on-secondary-fixed': '#1d1b16', 'surface-variant': '#dbe5dd', 'tertiary-fixed': '#ffdcbb', 'on-primary': '#ffffff', 'inverse-surface': '#29322d', 'outline': '#6e7a71', 'error': '#ba1a1a', 'surface-container-highest': '#dbe5dd', 'on-secondary-container': '#67645c', 'primary-container': '#21865b', 'secondary-fixed': '#e7e2d8', 'tertiary': '#875100', 'primary': '#006b45', 'primary-fixed': '#97f6c2', 'secondary-fixed-dim': '#cbc6bd', 'surface-dim': '#d2ddd5', 'on-tertiary-container': '#ffffff', 'on-surface': '#151d19', 'primary-fixed-dim': '#7bd9a7', 'on-tertiary-fixed-variant': '#673d00', 'surface-container-lowest': '#ffffff', 'on-primary-container': '#ffffff', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#2b1700', 'on-surface-variant': '#3e4942', 'on-error-container': '#93000a', 'surface-container-high': '#e1ebe3' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter-mobile': '1rem', 'margin-mobile': '1rem', 'margin': '2rem', 'space-sm': '0.5rem', 'space-md': '1rem', 'space-lg': '1.5rem', 'space-xl': '2.5rem', 'gutter': '1.5rem', 'space-xs': '0.25rem' }, fontFamily: { 'display-lg': ['Plus Jakarta Sans'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'headline-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'title-md': ['Inter'], 'label-md': ['Inter'], 'label-sm': ['Inter'], 'headline-lg': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'] }, fontSize: { 'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['15px', { lineHeight: '22px', fontWeight: '400' }], 'body-sm': ['13px', { lineHeight: '18px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '600' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.03em', fontWeight: '500' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg-mobile': ['36px', { lineHeight: '44px', letterSpacing: '-0.015em', fontWeight: '700' }], 'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="FoodShare Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpchK_2VlIkKkn_nHJm29vEOmhBlFY4iHqXamxmd6RoMKmopkvBs2Gd016mtFCc1enE-AT-xb8oJZYX5cUxGgzTavrTy0FFC3ODEsSx2ZSwy7UdpxHCSWteRYs5ejOzbt2PC8IR-TDGDvdBeF39Tt0KRdYTwdUt0mu7TVNABAcVUJJEGYrsq0GuNla_SNtLzxFIiSlXrsArsWPvjdBBpbJs7wLxIQ8voKXTduLHTJ_wBzGLYjGj9w"/><h1 class="font-title-md text-title-md text-on-surface truncate ml-space-xs max-w-[170px]">Listing Details</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Help or info" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">help_outline</span></button><div class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnsn5mglERQj9o7jV0eqohAnGMn6JaDqmhG-cppHoUlbVvDfGnWNK2IjwYDWZwXgO5lpskeAXfI4lNF4sIxspf3rMiyihioCi3kdWLSRD82hFmwBs10DJYpwSJH3m6oKwdXku9-qOVcEPHX6cG-H2iiFcpu91Xg8T_KWD5MnhC2wt41bxEkw_3_hEeFWBrjn6MBE4Bh6gqCsy2Qdfia9mKjRazWmmo0hBmTiIEe6uY3Z9qWkjYqVc"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-28">
+<!-- Top Navigation & Action Row -->
+<div class="flex items-center justify-between py-space-sm mb-space-sm">
+<button class="inline-flex items-center gap-space-xs text-primary font-label-lg text-label-lg hover:opacity-80 transition-opacity" onclick="history.back()">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Back to Browse</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Save listing" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" id="bookmark-btn" onclick="toggleBookmark()">
+<span class="material-symbols-outlined text-[20px]" id="bookmark-icon">bookmark_border</span>
+</button>
+<button aria-label="Share listing" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" id="share-btn" onclick="handleShare()">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+<!-- Hero Visual Card -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-md mb-space-md">
+<div class="h-60 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Close up warm studio shot of freshly packed wholesome roasted vegetable and quinoa grain bowls in eco-friendly kraft compostable boxes with colorful bell peppers, zucchini, chickpeas, and fresh herbs under bright natural daylight with earthy green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX-j91gIXg04ryv9jHoG9Yn_YiqBhRczuIxVPdlkTFj_biPlVjsoiIr5U2T6OMVE7o6Ry7hWLprHADbLMwFAYoOUpyF-3c4qhIDkF1AHLmEPpRj7I8nsetPf39A6sUFICS7ctxGzAZRCvM-5I8d9092vjmsa_N0D8vdAEfceDAwUG_EPmHUEA0fUB6wxsc0zZiPQhj8xbgOyWtgSYovgxvmxilCpHVXMhRxRIuVFT57_3Xj6uzUdc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/30 to-transparent"></div>
+<!-- Top badges on image -->
+<div class="absolute top-space-md left-space-md right-space-md flex flex-wrap gap-space-xs items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-tertiary-container font-label-md text-label-md font-semibold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+          Cooked Meals
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Available Now
+        </span>
+</div>
+<!-- Urgent timer badge over hero -->
+<div class="absolute bottom-space-md left-space-md right-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-semibold shadow-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">alarm</span>
+<span>Urgent: Pick up by 6:30 PM</span>
+</div>
+</div>
+</div>
+<!-- Core Food Title & Metrics -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col gap-space-xs">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Individually Packed Roasted Veggie &amp; Grain Bowls
+      </h2>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[18px] text-primary">inventory_2</span>
+<span>28 boxed meals • Approx. 28 adults</span>
+</div>
+<!-- Countdown Bar Card -->
+<div class="mt-space-xs p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">hourglass_top</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Must be collected within 2 hrs 15 mins</span>
+</div>
+<div class="w-12 h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-3/4 h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Donor Profile Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative w-12 h-12 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of a friendly chef standing in an organic urban cafe kitchen wearing a clean apron and smiling warmly, natural kitchen setting with warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM2Q2SPorKwAeUStBSxl8mVkcgze1KbnCNQ0bj_JWEZ7Dgi7dW2k5Ock7A8crIUrQMwF9KBn1bXxF--P_qfnKabsy9HfvEgRocbYfboHjkUxHt74ijgCGxNzOYetcbpcjDu82d9Y5t7P1eKkndaFBCjVEtTUBPykpOqpQmxF_1pI4oC5haarrBl-h3gFcLEJUAnDj7rdCZG3q6Gf9D2452gxufSY4BZx12Kd3V_WRK89iZpImVOdk"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Urban Kitchen &amp; Catering Co.</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;" title="Verified Donor">verified</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<strong class="ml-0.5 font-label-sm text-label-sm">4.95</strong>
+</span>
+<span>•</span>
+<span>128 rescues completed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact & Action row -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<button class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors" onclick="handleDonorChat()">
+<span class="material-symbols-outlined text-[18px] text-primary">chat_bubble</span>
+<span>Message Maria</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors" onclick="handleDonorCall()">
+<span class="material-symbols-outlined text-[18px] text-primary">call</span>
+<span>Call Kitchen</span>
+</button>
+</div>
+</div>
+<!-- Detailed Food Description -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">restaurant</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Batch Details</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Freshly prepared wholesome grain bowls with quinoa, roasted Mediterranean vegetables, chickpeas, and lemon tahini dressing. Packed in eco-friendly compostable containers. Kept in industrial refrigeration since 2:00 PM.
+    </p>
+<!-- Dietary & Safety Badges -->
+<div class="flex flex-wrap gap-2 pt-space-xs">
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+        Vegetarian
+      </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span>
+        Nut-Free
+      </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">ac_unit</span>
+        100% Refrigerated
+      </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+        Prepared Today
+      </span>
+</div>
+<!-- Allergen Warning Box -->
+<div class="mt-space-xs p-space-sm rounded-xl bg-surface-container-high flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Allergen Notice</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Contains sesame (tahini). Prepared in a certified kitchen with no dairy, no tree nuts, and no peanuts.</span>
+</div>
+</div>
+</div>
+<!-- Pickup Logistics Section -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pickup Instructions</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">1.2 miles away</span>
+</div>
+<!-- Interactive Location Preview -->
+<div class="w-full h-36 rounded-xl bg-cover bg-center relative overflow-hidden flex items-end p-space-sm shadow-inner" data-location="742 Evergreen Terrace, Springfield" style="background-image: url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg')">
+<div class="absolute inset-0 bg-inverse-surface/30"></div>
+<div class="relative z-10 w-full flex items-center justify-between bg-surface-container-lowest/95 backdrop-blur-md px-3 py-2 rounded-lg shadow-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Back Loading Dock #3</span>
+</div>
+<a class="shrink-0 text-primary font-label-sm text-label-sm font-semibold flex items-center gap-0.5 hover:underline" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span>Open Maps</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Detailed Address & Buzz Guide -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0 mt-0.5">apartment</span>
+<span class="font-body-md text-body-md text-on-surface">742 Evergreen Terrace, Back Loading Dock #3, Springfield</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">doorbell</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ring buzzer for FoodShare pickup. Ask for Maria in the commercial kitchen. Easy curbside van parking available.</span>
+</div>
+</div>
+</div>
+<!-- Interactive Partial Claim Quantity Selector Modal/Drawer Placeholder -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-end justify-center p-0" id="partial-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg flex flex-col gap-space-md shadow-xl animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Select Quantity</h4>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closePartialModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">How many boxed meals can your organization safely transport and distribute right now?</p>
+<div class="flex items-center justify-center gap-space-md py-space-sm">
+<button class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface text-[24px] font-bold active:scale-95 transition-transform" onclick="adjustPartial(-1)">-</button>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary min-w-[60px] text-center" id="partial-count">10</span>
+<button class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface text-[24px] font-bold active:scale-95 transition-transform" onclick="adjustPartial(1)">+</button>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md active:scale-[0.99] transition-transform" onclick="confirmPartialClaim()">
+        Confirm Request for <span id="btn-count">10</span> Meals
+      </button>
+</div>
+</div>
+<!-- Sticky Bottom Reservation Tray -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.06)] px-gutter-mobile pt-space-sm pb-safe flex flex-col gap-space-xs">
+<div class="flex gap-space-xs items-center">
+<!-- Secondary Partial Option -->
+<button class="flex-1 py-3 px-2 rounded-xl bg-surface-container-high text-primary font-label-md text-label-md font-semibold text-center hover:bg-surface-variant transition-colors" onclick="openPartialModal()">
+        Request Partial (10)
+      </button>
+<!-- Primary Full Batch Claim -->
+<button class="flex-[2] py-3 px-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1.5 shadow-md hover:bg-primary-container active:scale-[0.99] transition-all" id="main-claim-btn" onclick="claimEntireBatch()">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Request Entire Batch</span>
+</button>
+</div>
+<!-- Bill Emerson Good Samaritan Food Donation Act Protection Note -->
+<div class="flex items-center justify-center gap-1 text-center pb-1">
+<span class="material-symbols-outlined text-[13px] text-outline">verified_user</span>
+<span class="font-label-sm text-label-sm text-outline tracking-tight">Protected under the Bill Emerson Good Samaritan Food Donation Act</span>
+</div>
+</div>
+</div>
+<script>
+  let partialQuantity = 10;
+  const maxAvailable = 28;
+
+  function toggleBookmark() {
+    const icon = document.getElementById('bookmark-icon');
+    if (icon.innerText === 'bookmark_border') {
+      icon.innerText = 'bookmark';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      showToast('Listing saved to your saved claims');
+    } else {
+      icon.innerText = 'bookmark_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      showToast('Listing removed from saved');
+    }
+  }
+
+  function handleShare() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'FoodShare: Veggie Grain Bowls',
+        text: '28 boxed meals available for urgent community rescue!',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      showToast('Link copied to clipboard!');
+    }
+  }
+
+  function handleDonorChat() {
+    showToast('Connecting directly with Maria at Urban Kitchen...');
+  }
+
+  function handleDonorCall() {
+    showToast('Dialing kitchen dispatch: (555) 019-2834');
+  }
+
+  function openPartialModal() {
+    document.getElementById('partial-modal').classList.remove('hidden');
+  }
+
+  function closePartialModal() {
+    document.getElementById('partial-modal').classList.add('hidden');
+  }
+
+  function adjustPartial(delta) {
+    partialQuantity = Math.max(1, Math.min(maxAvailable, partialQuantity + delta));
+    document.getElementById('partial-count').innerText = partialQuantity;
+    document.getElementById('btn-count').innerText = partialQuantity;
+  }
+
+  function confirmPartialClaim() {
+    closePartialModal();
+    const claimBtn = document.getElementById('main-claim-btn');
+    claimBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check</span> Reserved ${partialQuantity} Meals!`;
+    claimBtn.classList.replace('bg-primary', 'bg-tertiary-container');
+    showToast(`Claim reserved for ${partialQuantity} grain bowls! Pickup code sent.`);
+  }
+
+  function claimEntireBatch() {
+    const claimBtn = document.getElementById('main-claim-btn');
+    claimBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span> Batch Reserved (28 Meals)`;
+    claimBtn.classList.replace('bg-primary', 'bg-tertiary-container');
+    showToast('🎉 Entire batch claimed! Check active claims for collection pass.');
+  }
+
+  function showToast(msg) {
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl text-label-md font-label-md shadow-lg transition-all transform duration-200';
+    toast.innerText = msg;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.add('opacity-0', '-translate-y-2');
+      setTimeout(() => toast.remove(), 250);
+    }, 2400);
+  }
+</script></main></body></html>

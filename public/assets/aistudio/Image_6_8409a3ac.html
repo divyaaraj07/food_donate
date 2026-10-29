@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>FoodShare</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-tint': '#006c46', 'secondary': '#615e57', 'tertiary-fixed-dim': '#ffb869', 'surface-container': '#e6f0e8', 'background': '#f2fcf4', 'surface-container-low': '#ecf6ee', 'inverse-primary': '#7bd9a7', 'on-primary-fixed': '#002112', 'surface': '#f2fcf4', 'on-secondary-fixed-variant': '#494740', 'on-error': '#ffffff', 'inverse-on-surface': '#e9f3eb', 'outline-variant': '#bec9c0', 'on-background': '#151d19', 'tertiary-container': '#a96700', 'error-container': '#ffdad6', 'surface-bright': '#f2fcf4', 'secondary-container': '#e7e2d8', 'on-primary-fixed-variant': '#005234', 'on-secondary': '#ffffff', 'on-secondary-fixed': '#1d1b16', 'surface-variant': '#dbe5dd', 'tertiary-fixed': '#ffdcbb', 'on-primary': '#ffffff', 'inverse-surface': '#29322d', 'outline': '#6e7a71', 'error': '#ba1a1a', 'surface-container-highest': '#dbe5dd', 'on-secondary-container': '#67645c', 'primary-container': '#21865b', 'secondary-fixed': '#e7e2d8', 'tertiary': '#875100', 'primary': '#006b45', 'primary-fixed': '#97f6c2', 'secondary-fixed-dim': '#cbc6bd', 'surface-dim': '#d2ddd5', 'on-tertiary-container': '#ffffff', 'on-surface': '#151d19', 'primary-fixed-dim': '#7bd9a7', 'on-tertiary-fixed-variant': '#673d00', 'surface-container-lowest': '#ffffff', 'on-primary-container': '#ffffff', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#2b1700', 'on-surface-variant': '#3e4942', 'on-error-container': '#93000a', 'surface-container-high': '#e1ebe3' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter-mobile': '1rem', 'margin-mobile': '1rem', 'margin': '2rem', 'space-sm': '0.5rem', 'space-md': '1rem', 'space-lg': '1.5rem', 'space-xl': '2.5rem', 'gutter': '1.5rem', 'space-xs': '0.25rem' }, fontFamily: { 'display-lg': ['Plus Jakarta Sans'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'headline-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'title-md': ['Inter'], 'label-md': ['Inter'], 'label-sm': ['Inter'], 'headline-lg': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'] }, fontSize: { 'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['15px', { lineHeight: '22px', fontWeight: '400' }], 'body-sm': ['13px', { lineHeight: '18px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '600' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.03em', fontWeight: '500' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg-mobile': ['36px', { lineHeight: '44px', letterSpacing: '-0.015em', fontWeight: '700' }], 'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="FoodShare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpchK_2VlIkKkn_nHJm29vEOmhBlFY4iHqXamxmd6RoMKmopkvBs2Gd016mtFCc1enE-AT-xb8oJZYX5cUxGgzTavrTy0FFC3ODEsSx2ZSwy7UdpxHCSWteRYs5ejOzbt2PC8IR-TDGDvdBeF39Tt0KRdYTwdUt0mu7TVNABAcVUJJEGYrsq0GuNla_SNtLzxFIiSlXrsArsWPvjdBBpbJs7wLxIQ8voKXTduLHTJ_wBzGLYjGj9w"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary leading-none">FoodShare</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">DONOR</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Home</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span></button><div class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnsn5mglERQj9o7jV0eqohAnGMn6JaDqmhG-cppHoUlbVvDfGnWNK2IjwYDWZwXgO5lpskeAXfI4lNF4sIxspf3rMiyihioCi3kdWLSRD82hFmwBs10DJYpwSJH3m6oKwdXku9-qOVcEPHX6cG-H2iiFcpu91Xg8T_KWD5MnhC2wt41bxEkw_3_hEeFWBrjn6MBE4Bh6gqCsy2Qdfia9mKjRazWmmo0hBmTiIEe6uY3Z9qWkjYqVc"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-10 space-y-space-xl">
+<!-- Hero Section with Tactile Warmth & Dual Action Focus -->
+<section class="relative overflow-hidden rounded-3xl bg-surface-container-low p-space-md shadow-sm">
+<div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-primary-fixed-dim/20 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-10 bottom-0 w-36 h-36 rounded-full bg-tertiary-fixed/30 blur-xl pointer-events-none"></div>
+<div class="relative flex flex-col space-y-space-md">
+<!-- Welcoming Pill Tag -->
+<div class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-highest w-fit shadow-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium tracking-wide">HYPERLOCAL RESCUE NETWORK</span>
+</div>
+<!-- Core Headline -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">
+        Share More Food. <br/>
+<span class="text-primary">Waste Less.</span> <br/>
+        Feed More People.
+      </h1>
+<!-- Mission Statement -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Connecting restaurants, grocers, and community donors with local food banks and individuals in real time.
+      </p>
+<!-- Primary Action Buttons -->
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="w-full h-12 flex items-center justify-between px-space-lg rounded-xl bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md active:scale-[0.98] transition-transform" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+            Donate Surplus Food
+          </span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="w-full h-12 flex items-center justify-center gap-2 px-space-lg rounded-xl bg-secondary-container text-on-secondary-fixed font-label-lg text-label-lg hover:bg-secondary-fixed active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px] text-tertiary">near_me</span>
+<span>Find Food Near You</span>
+</a>
+</div>
+<!-- Warm Lifestyle Graphic Card -->
+<div class="relative w-full h-44 rounded-2xl overflow-hidden mt-2 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="A warm and uplifting top-down documentary photo of community volunteers and bakers loading fresh sourdough loaves and colorful organic vegetables into reusable wooden crates. Soft sunlight, joyful expressions, rich earth tones, vivid fresh greens and golden bakery crusts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUKNKzIXdugw3GkEGA3LlAWuXFknHI8gnCN8dNGJoXZGhG1Qm0FydeEvTIXrKlRvXMWHUHXusAncGsj65MMqvHohY4MOcPxlZJLIwDVDwWTYiLwesib6U9tqLbx1Rehf3-64I3qIUz3DoWUeSfOm-G_Tvwkzg5wW56cvVlVg4MteD9yVrEdpFv03A4aeBIBUlzBnuj_vq3jtE4rG5vOCqBeBnR58cpT-qeveyhHJZZWWN622p3w4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent flex items-end p-space-sm">
+<div class="flex items-center gap-2 text-inverse-on-surface">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">verified</span>
+<span class="font-label-sm text-label-sm">Safe, inspected redistribution within 90 minutes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Impact Statistics Bento / Ticker -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">ecg_heart</span>
+<h2 class="font-title-md text-title-md text-on-surface">Community Impact Live</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        Live Ticker
+      </span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between shadow-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block font-bold tracking-tight">42,850+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Meals Shared</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between shadow-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed mb-2">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block font-bold tracking-tight">1,240+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Donors</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between shadow-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary mb-2">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block font-bold tracking-tight">185</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NGOs &amp; Pantries</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between shadow-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">co2</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block font-bold tracking-tight">18.4 Tons</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CO2 Offset</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Urgent Donations Carousel -->
+<section class="space-y-space-sm -mx-gutter-mobile px-gutter-mobile overflow-hidden">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Urgent Food Rescues</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ready for immediate pickup nearby</p>
+</div>
+<a class="font-label-sm text-label-sm text-primary flex items-center gap-0.5" href="#">
+        See All (14)
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal Scrollable Container -->
+<div class="flex gap-3 overflow-x-auto pb-2 pt-1 scroll-smooth no-scrollbar -mx-gutter-mobile px-gutter-mobile">
+<!-- Donation Card 1 (Bakery) -->
+<div class="w-[260px] flex-shrink-0 bg-surface-container-lowest rounded-2xl p-3 shadow-md flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden mb-2.5">
+<img class="w-full h-full object-cover" data-alt="Rustic freshly baked golden artisan sourdough bread loaves wrapped in eco-friendly paper bags on a clean wooden cafe counter, appetizing crust, warm morning kitchen light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9RWNk6UXqxJgxbBwG5XLI9sOMjop9ULKhmdAL-WSmGDlqsLzRqerKqhSKF-sVS1RTekT7kINxVUhxrGFc_F3M__BZ27205kEcgHNSCYqaqXkscWLt2T6XeAkpJT1oqWXt0sArNh9uer96I-aZ86WXvHRpUTbwXbZ9sAB193Gh1QnLIFj0uPk7-Pa6UTH4maBcr--UV8i8GqCDp8DmK9pvHO9kTKM_eMazADEbtoynYaQ9K5e2Rhk"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase font-semibold">
+              Bakery
+            </span>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              Exp: 3h
+            </div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold truncate">Fresh Artisan Bakery Loaves</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Green Valley Bakery</p>
+</div>
+<div class="pt-3 flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">15 kg</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span> 0.8 mi away
+            </span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-primary-container text-on-primary-container font-label-sm text-label-sm active:scale-95 transition-transform">
+            Claim
+          </button>
+</div>
+</div>
+<!-- Donation Card 2 (Produce) -->
+<div class="w-[260px] flex-shrink-0 bg-surface-container-lowest rounded-2xl p-3 shadow-md flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden mb-2.5">
+<img class="w-full h-full object-cover" data-alt="Vibrant wooden crates filled with fresh farm greens, crisp cucumbers, ripe red tomatoes, and purple carrots neatly arranged, commercial grocery market prep area, bright wholesome lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa_7xOAgD8snvXzt-Dlg8ASkNQHJSOluq0fUgmEUrLergWir91GZhgEL6QaLoeVrRvlUZLSKbryjNms6U3c-nYU1g7NypMTDRiBRurBTnpQGiXWbzsj_v7l0mfp8Z28A8B1NwgwN-EFjMLCkwPGjwp2VxnxfDrGLTCoYHLhJtO8rTHTNAkK9Cqc7gTbTYhnfjLBvKBtdzZg39RlYnR4-u1mDG4PMFM8FSBpD8Js0F3E0PrRXqcX0Q"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase font-semibold">
+              Produce
+            </span>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              Exp: 6h
+            </div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold truncate">Organic Vegetable Crates</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Sunrise Grocery</p>
+</div>
+<div class="pt-3 flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">25 kg</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span> 1.4 mi away
+            </span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-primary-container text-on-primary-container font-label-sm text-label-sm active:scale-95 transition-transform">
+            Claim
+          </button>
+</div>
+</div>
+<!-- Donation Card 3 (Prepared Meals) -->
+<div class="w-[260px] flex-shrink-0 bg-surface-container-lowest rounded-2xl p-3 shadow-md flex flex-col justify-between">
+<div>
+<div class="relative w-full h-32 rounded-xl overflow-hidden mb-2.5">
+<img class="w-full h-full object-cover" data-alt="Stacked eco-friendly cardboard meal prep takeaway containers with fresh basmati rice, vegetable curry, and herbs in a commercial hotel kitchen staging room, ready for pickup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmVYY6HhjSRkSP9KVnb5JYMg9LRrncnId-lg59UiKJ3gJ1H_2xjWsF51ddII5kKPOzEYd2SDwwFh9L7sZnEAwIIVicUM_dC3HjWFilcq43iryznoTJj_Z8tB3VlbRa9cBLv16498MkTQ7arc7a54K8bEWoqQEPlbNqfdbLWLbbsG-tpgVW8kMFMJUJgxRzpytm7jLGn7_tMjIzV5BdE1IlQG455UAfUnd5yN4zS2i2nRcJ9u6wnbA"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm uppercase font-semibold">
+              Prepared
+            </span>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+              Exp: 4h
+            </div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold truncate">Rice &amp; Curry Catering Bowls</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Grand Hyatt Banquet</p>
+</div>
+<div class="pt-3 flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">30 Portions</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span> 2.1 mi away
+            </span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-primary-container text-on-primary-container font-label-sm text-label-sm active:scale-95 transition-transform">
+            Claim
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works (Delightful 3-Step Guide) -->
+<section class="space-y-space-md">
+<div class="text-center space-y-1">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Simple Logistics</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">How FoodShare Works</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Connecting food rescue in under 3 minutes</p>
+</div>
+<div class="space-y-3">
+<!-- Step 1 -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex gap-space-md items-start shadow-xs">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm flex-shrink-0">
+          1
+        </div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Donate in 60s</span>
+<span class="material-symbols-outlined text-[18px] text-primary">photo_camera</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Snap a quick photo, tag the category, and list surplus food before it goes to waste.
+          </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex gap-space-md items-start shadow-xs">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm flex-shrink-0">
+          2
+        </div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Instant Match</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">notifications_active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Verified local shelters, soup kitchens, and verified neighbors receive an instant dispatch ping.
+          </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex gap-space-md items-start shadow-xs">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-headline-sm text-headline-sm flex-shrink-0">
+          3
+        </div>
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Seamless Hand-off</span>
+<span class="material-symbols-outlined text-[18px] text-primary">local_shipping</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Coordinate swift, contactless or scheduled curbside pickup with real-time ETA tracking.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Testimonial & Partner Endorsements -->
+<section class="space-y-space-md">
+<!-- Testimonial Card -->
+<div class="bg-surface-container-highest/60 rounded-3xl p-space-md space-y-space-sm relative overflow-hidden shadow-xs">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+        “FoodShare replaced our evening surplus disposal with 40 daily meals directly to our neighborhood shelter. The pickup is seamless.”
+      </p>
+<div class="flex items-center gap-3 pt-1">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-semibold">
+          EL
+        </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block font-semibold leading-tight">Elena Lin</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Head Chef, The Rustle Bistro</span>
+</div>
+</div>
+</div>
+<!-- Trusted Partners Grid -->
+<div class="space-y-2">
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+        Trusted Rescue Network Partners
+      </div>
+<div class="grid grid-cols-3 gap-2">
+<div class="h-14 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[20px] text-primary">diversity_1</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight mt-0.5">Feeding America</span>
+</div>
+<div class="h-14 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[20px] text-tertiary">home_pin</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight mt-0.5">Local Hope</span>
+</div>
+<div class="h-14 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center p-1">
+<span class="material-symbols-outlined text-[20px] text-on-surface">eco</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight mt-0.5">CleanPlate</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Conversion Tray / Quick Callout Card -->
+<section class="rounded-3xl bg-primary p-space-md text-on-primary shadow-lg relative overflow-hidden">
+<div class="absolute right-0 bottom-0 opacity-10 translate-x-4 translate-y-4 pointer-events-none">
+<span class="material-symbols-outlined text-[130px]">spa</span>
+</div>
+<div class="relative space-y-space-sm">
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-bold">Have Surplus Today?</h3>
+<p class="font-body-sm text-body-sm text-on-primary/90">
+          Turn your leftover kitchen prep, bakery bins, or pantry items into community smiles.
+        </p>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<a class="flex-1 h-11 flex items-center justify-center gap-2 rounded-xl bg-on-primary text-primary font-label-lg text-label-lg active:scale-95 transition-transform shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+          Post a Listing
+        </a>
+<a class="h-11 px-4 flex items-center justify-center rounded-xl bg-primary-fixed-dim/30 text-on-primary font-label-sm text-label-sm active:scale-95 transition-transform" href="#">
+          Learn More
+        </a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for urgent donation cards claim trigger
+  document.querySelectorAll('button').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const target = e.currentTarget;
+      if (target.textContent.trim().includes('Claim')) {
+        const originalText = target.textContent;
+        target.textContent = 'Claimed!';
+        target.classList.remove('bg-primary-container');
+        target.classList.add('bg-secondary-container', 'text-on-secondary-fixed');
+        setTimeout(() => {
+          target.textContent = originalText;
+          target.classList.add('bg-primary-container');
+          target.classList.remove('bg-secondary-container', 'text-on-secondary-fixed');
+        }, 2400);
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex justify-between items-center h-16 px-space-xs max-w-md mx-auto"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-full transition-colors text-primary font-label-md" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="browse" href="#"><span class="material-symbols-outlined text-[22px]">search</span><span class="font-label-sm text-label-sm mt-0.5">Browse</span></a><div class="flex-1 flex flex-col items-center justify-center h-full relative -top-3.5"><a class="w-13 h-13 min-w-[48px] min-h-[48px] rounded-full bg-primary-container text-on-primary-container shadow-[0_8px_16px_rgba(33,134,91,0.28)] flex items-center justify-center hover:bg-primary transition-colors transform active:scale-95" data-path="donate" href="#"><span class="material-symbols-outlined text-[28px]">add</span></a><span class="font-label-sm text-label-sm text-primary font-semibold mt-1">Donate</span></div><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="activity" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm mt-0.5">Activity</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Dashboard</span></a></div></nav></body></html>

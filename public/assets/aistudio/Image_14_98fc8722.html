@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>FoodShare</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface-tint': '#006c46', 'secondary': '#615e57', 'tertiary-fixed-dim': '#ffb869', 'surface-container': '#e6f0e8', 'background': '#f2fcf4', 'surface-container-low': '#ecf6ee', 'inverse-primary': '#7bd9a7', 'on-primary-fixed': '#002112', 'surface': '#f2fcf4', 'on-secondary-fixed-variant': '#494740', 'on-error': '#ffffff', 'inverse-on-surface': '#e9f3eb', 'outline-variant': '#bec9c0', 'on-background': '#151d19', 'tertiary-container': '#a96700', 'error-container': '#ffdad6', 'surface-bright': '#f2fcf4', 'secondary-container': '#e7e2d8', 'on-primary-fixed-variant': '#005234', 'on-secondary': '#ffffff', 'on-secondary-fixed': '#1d1b16', 'surface-variant': '#dbe5dd', 'tertiary-fixed': '#ffdcbb', 'on-primary': '#ffffff', 'inverse-surface': '#29322d', 'outline': '#6e7a71', 'error': '#ba1a1a', 'surface-container-highest': '#dbe5dd', 'on-secondary-container': '#67645c', 'primary-container': '#21865b', 'secondary-fixed': '#e7e2d8', 'tertiary': '#875100', 'primary': '#006b45', 'primary-fixed': '#97f6c2', 'secondary-fixed-dim': '#cbc6bd', 'surface-dim': '#d2ddd5', 'on-tertiary-container': '#ffffff', 'on-surface': '#151d19', 'primary-fixed-dim': '#7bd9a7', 'on-tertiary-fixed-variant': '#673d00', 'surface-container-lowest': '#ffffff', 'on-primary-container': '#ffffff', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#2b1700', 'on-surface-variant': '#3e4942', 'on-error-container': '#93000a', 'surface-container-high': '#e1ebe3' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter-mobile': '1rem', 'margin-mobile': '1rem', 'margin': '2rem', 'space-sm': '0.5rem', 'space-md': '1rem', 'space-lg': '1.5rem', 'space-xl': '2.5rem', 'gutter': '1.5rem', 'space-xs': '0.25rem' }, fontFamily: { 'display-lg': ['Plus Jakarta Sans'], 'body-md': ['Inter'], 'body-sm': ['Inter'], 'headline-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'title-md': ['Inter'], 'label-md': ['Inter'], 'label-sm': ['Inter'], 'headline-lg': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'headline-md': ['Plus Jakarta Sans'] }, fontSize: { 'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['15px', { lineHeight: '22px', fontWeight: '400' }], 'body-sm': ['13px', { lineHeight: '18px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '600' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }], 'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.03em', fontWeight: '500' }], 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg-mobile': ['36px', { lineHeight: '44px', letterSpacing: '-0.015em', fontWeight: '700' }], 'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen pt-safe pb-safe"><main class="flex-1 flex flex-col relative w-full bg-surface px-gutter-mobile"><div class="flex flex-col w-full pb-8">
+<!-- Interactive Feedback Toast -->
+<aside aria-live="polite" class="mb-4 transform transition-all duration-300 ease-out bg-primary-container text-on-primary-container rounded-xl p-space-md shadow-md flex items-center justify-between gap-3" id="verificationToast">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium truncate">Verification email sent! Please check your inbox.</p>
+</div>
+<button class="text-on-primary-container/80 hover:text-on-primary-container shrink-0 p-1 rounded-lg" onclick="document.getElementById('verificationToast').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</aside>
+<!-- Community Impact Banner with Tactile Warmth -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-sm mb-4 relative overflow-hidden">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Warm documentary photo of a compassionate volunteer handing fresh, vibrant organic apples and artisanal bread to a grateful neighbor in a sunlit community pantry, golden hour lighting, wholesome earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8PvYpsWl7ODw04_XH0vKFWkA7UopCj6zZ5vc0UF7LS0bQqlq8y9sGwvRnRIcWwA6dXce1gby9DAtYlbN63dA8PbflfcbmTPY1K9o_OfvOf4frTvEJfVIREQWQAjSXMB4NHfj64Bh2-mw1HY6kaiEFjVgtn-cPhy-ghXBSnSBm-vfJqSFuTjYyzAdh0vq4_QRSJR0_kSo3uB6cntbwwgXadjW_bTWwwxCG6cVccZc6F9Fyw3tVJmw"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">3,420 kg Rescued This Week</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Join Our Shared Table</h2>
+</div>
+</div>
+</section>
+<!-- Auth Wrapper Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<!-- Top Segmented Switcher -->
+<div class="bg-surface-container p-1 rounded-xl flex items-center mb-6">
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant transition-all duration-200" id="tabSignIn" onclick="switchAuthTab('signin')" type="button">
+        Sign In
+      </button>
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm transition-all duration-200" id="tabSignUp" onclick="switchAuthTab('signup')" type="button">
+        Create Account
+      </button>
+</div>
+<!-- Sign In Panel (Hidden by default) -->
+<div class="hidden flex-col gap-4" id="signInPanel">
+<div class="space-y-3">
+<div class="relative">
+<input class="peer w-full h-12 px-4 pt-4 pb-1 rounded-xl bg-surface-container-lowest text-on-surface placeholder-transparent focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm font-body-md text-body-md" id="loginEmail" placeholder=" " type="email"/>
+<label class="absolute left-4 top-1 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:font-label-sm peer-focus:text-label-sm peer-focus:text-primary pointer-events-none" for="loginEmail">Email Address</label>
+</div>
+<div class="relative">
+<input class="peer w-full h-12 px-4 pt-4 pb-1 rounded-xl bg-surface-container-lowest text-on-surface placeholder-transparent focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm font-body-md text-body-md" id="loginPassword" placeholder=" " type="password"/>
+<label class="absolute left-4 top-1 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:font-label-sm peer-focus:text-label-sm peer-focus:text-primary pointer-events-none" for="loginPassword">Password</label>
+</div>
+</div>
+<button class="w-full h-12 bg-primary-container text-on-primary-container rounded-xl font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity flex items-center justify-center gap-2" type="button">
+<span>Sign In to FoodShare</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Sign Up Form (Active) -->
+<form class="flex flex-col gap-5" id="signUpForm" onsubmit="event.preventDefault(); showToast();">
+<!-- Role Selection Section -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2.5">Select Your Community Role</label>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Food Donor Card -->
+<label class="relative flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors shadow-sm has-[:checked]:bg-surface-container-high">
+<input checked="" class="mt-1 text-primary focus:ring-0 accent-primary w-4 h-4 shrink-0" name="accountRole" type="radio" value="donor"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Food Donor</span>
+<span class="ml-auto px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Donor</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Restaurant, Grocery, Bakery, Caterer, or Individual</p>
+<p class="font-label-sm text-label-sm text-primary font-medium mt-1">"I want to share surplus food"</p>
+</div>
+</label>
+<!-- NGO / Recipient Card -->
+<label class="relative flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors shadow-sm has-[:checked]:bg-surface-container-high">
+<input class="mt-1 text-primary focus:ring-0 accent-primary w-4 h-4 shrink-0" name="accountRole" type="radio" value="recipient"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">NGO / Recipient</span>
+<span class="ml-auto px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Community</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-1">Food Bank, Shelter, Charity, Community Member</p>
+<p class="font-label-sm text-label-sm text-tertiary font-medium mt-1">"I want to request and distribute food"</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Registration Fields with Floating Labels -->
+<div class="flex flex-col gap-3">
+<!-- Organization / Full Name -->
+<div class="relative bg-surface-container-low rounded-xl focus-within:bg-surface-container-high transition-colors shadow-sm">
+<input class="peer w-full h-12 px-3.5 pt-4 pb-1 rounded-xl bg-transparent text-on-surface placeholder-transparent focus:outline-none font-body-md text-body-md" id="regOrgName" placeholder=" " type="text" value="Harbor Green Market &amp; Bakery"/>
+<label class="absolute left-3.5 top-1 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:font-label-sm peer-focus:text-label-sm peer-focus:text-primary pointer-events-none" for="regOrgName">Organization or Full Name</label>
+<div class="absolute right-3.5 top-3 text-secondary">
+<span class="material-symbols-outlined text-[20px]">business</span>
+</div>
+</div>
+<!-- Email Address with Validation Checkmark -->
+<div class="relative bg-surface-container-low rounded-xl focus-within:bg-surface-container-high transition-colors shadow-sm">
+<input class="peer w-full h-12 px-3.5 pt-4 pb-1 rounded-xl bg-transparent text-on-surface placeholder-transparent focus:outline-none font-body-md text-body-md pr-10" id="regEmail" placeholder=" " type="email" value="donations@harborgreen.org"/>
+<label class="absolute left-3.5 top-1 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:font-label-sm peer-focus:text-label-sm peer-focus:text-primary pointer-events-none" for="regEmail">Email Address</label>
+<div class="absolute right-3.5 top-3 text-primary flex items-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Password with Strength Meter -->
+<div class="flex flex-col gap-1.5">
+<div class="relative bg-surface-container-low rounded-xl focus-within:bg-surface-container-high transition-colors shadow-sm">
+<input class="peer w-full h-12 px-3.5 pt-4 pb-1 rounded-xl bg-transparent text-on-surface placeholder-transparent focus:outline-none font-body-md text-body-md pr-10" id="regPassword" placeholder=" " type="password" value="SafePantry2025#"/>
+<label class="absolute left-3.5 top-1 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:font-label-sm peer-focus:text-label-sm peer-focus:text-primary pointer-events-none" for="regPassword">Create Password</label>
+<button class="absolute right-3.5 top-3 text-secondary hover:text-on-surface" onclick="togglePasswordVisibility('regPassword')" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+<!-- Password Strength Indicator -->
+<div class="px-1 flex items-center justify-between gap-2">
+<div class="flex-1 flex items-center gap-1">
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-primary text-[14px]">shield</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Strong</span>
+</div>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="relative bg-surface-container-low rounded-xl focus-within:bg-surface-container-high transition-colors shadow-sm">
+<input class="peer w-full h-12 px-3.5 pt-4 pb-1 rounded-xl bg-transparent text-on-surface placeholder-transparent focus:outline-none font-body-md text-body-md pr-10" id="regConfirmPassword" placeholder=" " type="password" value="SafePantry2025#"/>
+<label class="absolute left-3.5 top-1 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:font-label-sm peer-focus:text-label-sm peer-focus:text-primary pointer-events-none" for="regConfirmPassword">Confirm Password</label>
+<div class="absolute right-3.5 top-3 text-primary flex items-center">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<!-- Location / Zip Code with Auto-detect -->
+<div class="relative bg-surface-container-low rounded-xl focus-within:bg-surface-container-high transition-colors shadow-sm">
+<input class="peer w-full h-12 px-3.5 pt-4 pb-1 rounded-xl bg-transparent text-on-surface placeholder-transparent focus:outline-none font-body-md text-body-md pr-10" id="regLocation" placeholder=" " type="text" value="Mission District, 94110"/>
+<label class="absolute left-3.5 top-1 text-on-surface-variant font-label-sm text-label-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:font-body-md peer-placeholder-shown:text-body-md peer-focus:top-1 peer-focus:font-label-sm peer-focus:text-label-sm peer-focus:text-primary pointer-events-none" for="regLocation">Neighborhood or Zip Code</label>
+<button class="absolute right-3.5 top-3 text-primary hover:opacity-80" title="Use current location" type="button">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</button>
+</div>
+</div>
+<!-- Food Safety & Good Samaritan Disclaimer Checkbox -->
+<label class="flex items-start gap-2.5 cursor-pointer select-none">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary focus:ring-0 accent-primary shrink-0" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary">
+          I agree to the <span class="text-primary font-semibold">Terms of Service</span> and acknowledge compliance with the <span class="text-on-surface font-semibold underline decoration-primary/40">Food Safety &amp; Good Samaritan Donation guidelines</span>.
+        </span>
+</label>
+<!-- Primary Action Button -->
+<button class="w-full h-12 bg-primary-container text-on-primary-container rounded-xl font-label-lg text-label-lg shadow-sm hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2" type="submit">
+<span>Create Account &amp; Start Sharing</span>
+<span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+</button>
+</form>
+<!-- SSO Divider -->
+<div class="relative my-5 flex items-center justify-center">
+<div class="w-full h-[1px] bg-outline-variant/50 absolute"></div>
+<span class="relative px-3 bg-surface-container-lowest font-label-sm text-label-sm text-secondary uppercase tracking-wider">or sign up with</span>
+</div>
+<!-- Single Sign-On Actions -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Google SSO -->
+<button class="h-11 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors shadow-sm" type="button">
+<svg aria-hidden="true" class="w-4 h-4 shrink-0" viewbox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.7 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3 0-.8.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2c0 2.8.7 5.5 1.9 7.8l3.7-2.9z" fill="#FBBC05"></path>
+<path d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.3-6.4-5.2L1.9 16.5C3.7 20.3 7.5 23.5 12 23.5z" fill="#34A853"></path>
+</svg>
+<span>Google</span>
+</button>
+<!-- Apple SSO -->
+<button class="h-11 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors shadow-sm" type="button">
+<svg aria-hidden="true" class="w-4 h-4 shrink-0" fill="currentColor" viewbox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.88c.67-.82 1.12-1.95 1-3.08-.97.04-2.14.65-2.83 1.46-.61.71-1.14 1.86-1 2.97 1.08.08 2.18-.54 2.83-1.35z"></path>
+</svg>
+<span>Apple</span>
+</button>
+</div>
+<!-- Quick Toggle Text -->
+<div class="mt-6 text-center">
+<p class="font-body-sm text-body-sm text-secondary">
+        Already have an account? 
+        <button class="text-primary font-semibold hover:underline ml-1" onclick="switchAuthTab('signin')" type="button">
+          Sign In
+        </button>
+</p>
+</div>
+</div>
+<!-- Trust & Transparency Footer Pill -->
+<footer class="mt-4 flex items-center justify-center gap-2 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
+<span>Protected under Federal Bill Emerson Good Samaritan Act</span>
+</footer>
+</div>
+<script>
+  function switchAuthTab(tab) {
+    const signInBtn = document.getElementById('tabSignIn');
+    const signUpBtn = document.getElementById('tabSignUp');
+    const signInPanel = document.getElementById('signInPanel');
+    const signUpForm = document.getElementById('signUpForm');
+
+    if (tab === 'signin') {
+      signInBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm transition-all duration-200";
+      signUpBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant transition-all duration-200";
+      signInPanel.classList.remove('hidden');
+      signInPanel.classList.add('flex');
+      signUpForm.classList.add('hidden');
+    } else {
+      signUpBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm transition-all duration-200";
+      signInBtn.className = "flex-1 py-2 text-center rounded-lg font-label-md text-label-md text-on-surface-variant transition-all duration-200";
+      signUpForm.classList.remove('hidden');
+      signInPanel.classList.add('hidden');
+      signInPanel.classList.remove('flex');
+    }
+  }
+
+  function togglePasswordVisibility(fieldId) {
+    const input = document.getElementById(fieldId);
+    if (!input) return;
+    input.type = input.type === 'password' ? 'text' : 'password';
+  }
+
+  function showToast() {
+    const toast = document.getElementById('verificationToast');
+    if (toast) {
+      toast.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+</script></main></body></html>
